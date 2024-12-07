@@ -28,7 +28,8 @@ const styles = {
     fontSize: "5rem", // Large font size for the title
     fontWeight: "bold",
     margin: "0",
-    color: "#ffffff", // Eye-catching neon-like color
+    fontFamily: "'Roboto', sans-serif", // Modern font style
+    color: "red", // Eye-catching neon-like color
     letterSpacing: "2px", // Slightly spaced out letters for a sleek look
   },
   description: {
