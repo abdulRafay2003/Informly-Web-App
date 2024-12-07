@@ -5,7 +5,7 @@ export default function Home() {
     <main style={styles.main}>
       <div style={styles.container}>
         <h1 style={styles.title}>Informly</h1>
-        <p style={styles.description}>Help, just a tap away</p>
+        <p style={styles.description}>HELP, JUST A TAP AWAY</p>
       </div>
     </main>
   );
@@ -17,8 +17,8 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     height: "100vh", // Full viewport height
-    backgroundColor: "#000000", // Dark background for contrast
-    color: "#ffffff", // White text for better visibility
+    backgroundColor: "#ffffff", // Dark background for contrast
+    color: "#000000", // White text for better visibility
     fontFamily: "'Poppins', sans-serif", // Modern font style
   },
   container: {
@@ -33,9 +33,10 @@ const styles = {
     letterSpacing: "2px", // Slightly spaced out letters for a sleek look
   },
   description: {
-    fontSize: "1.5rem", // Smaller font size for subtitle
-    marginTop: "12px",
-    color: "#DDDDDD", // Softer white for description
+    fontSize: "1rem", // Smaller font size for subtitle
+    marginTop: "1px",
+    fontWeight:'bold',
+    color: "#000000", // Softer white for description
     maxWidth: "600px", // Limit width of the description
   },
 };

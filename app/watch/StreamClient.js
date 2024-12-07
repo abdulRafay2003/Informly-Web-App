@@ -107,13 +107,13 @@ export default function StreamClient() {
   }, [token]);
 
   return (
-    <>
+    <div style={styles.bgColor}>
       <h1 style={styles.heading}>Informly</h1>
       <h2 style={styles.subHeading}>Help, just a tap away</h2>
       <div ref={remoteStreamRef} id="remote-stream" style={styles.streamContainer}>
         {/* Video will be rendered inside this container */}
       </div>
-    </>
+    </div>
   );
 }
 
@@ -123,13 +123,14 @@ const styles = {
     color: "red",
     margin: "5px 0",
     fontFamily: "'Roboto', sans-serif",
-    fontSize: "2rem",
+    fontSize: "2.5rem",
     fontWeight: "bold",
   },
   subHeading:{
 fontSize:"1rem",
 fontFamily:"'Poppins',sans-serif",
-color:"#ffffff",
+color:"#000000",
+fontWeight:"bold",
 textAlign:"center"
   },
   streamContainer: {
@@ -139,7 +140,7 @@ textAlign:"center"
     height: "calc(100vh - 60px)",
     justifyContent: "space-around", // Space out the video containers
     alignItems: "center",
-    backgroundColor: "black",
+    backgroundColor: "white",
     position: "relative",
     overflow: "hidden",
   },
@@ -149,6 +150,9 @@ textAlign:"center"
     backgroundColor: "gray", // Fallback color for player containers
     border: "1px solid #ffffff", // Optional border for visibility
   },
+  bgColor:{
+    backgroundColor:"white"
+  }
 };
 
 
