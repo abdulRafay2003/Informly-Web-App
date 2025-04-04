@@ -55,7 +55,7 @@ export default function StreamClient() {
                 playerContainer = document.createElement("div");
                 playerContainer.id = `user-${user.uid}-${index}`;
                 playerContainer.style.width = "50%"; // Adjust to fit two video streams
-                playerContainer.style.height = "50%"; // Adjust to fit two video streams
+                playerContainer.style.height = "900px"; // Adjust to fit two video streams
                 playerContainer.style.display = "inline-block"; // To place streams side by side
                 remoteStreamRef.current.append(playerContainer);
               }
@@ -140,7 +140,7 @@ const styles = {
   },
   streamContainer: {
     display: "flex",
-    flexDirection: "column", // Align children in a column
+  flexDirection:'row',
     width: "100vw",
     height: "calc(100vh - 60px)",
     justifyContent: "space-around", // Space out the video containers
