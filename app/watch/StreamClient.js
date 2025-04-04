@@ -4,8 +4,9 @@ import React, { useEffect, useRef, useState } from "react";
 import AgoraRTC from "agora-rtc-sdk-ng";
 import { useSearchParams } from "next/navigation";
 
-const appId = "978c544259cc44f496fd50e2ee359d06";
-const token = '007eJxTYLiWwqXyZlaV6N3oTdOl+3nOHrUy9qhJuvZTyNJkJm9W4ikFBktzi2RTExMjU8vkZBOTNBNLs7QUU4NUo9RUY1PLFAMzo40h6Q2BjAwym7hYGBkgEMTnYMjMS8svys2pZGAAAD6iHrc='
+const appId = "5d6071ce5e0445709bc9f1c7d7f20888";
+const token =
+  "007eJxTYPCxZGXgNAhV7Xwqoc9V0tXbL79z/9SFL/8GiiX28pxR7VRgME0xMzA3TE41TTUwMTE1N7BMSrZMM0w2TzFPMzKwsLCYkvEhvSGQkWFD/AlWRgYIBPE5GDLz0vKLcnMqGRgAt28epA==";
 const channelName = "informly";
 
 export default function StreamClient() {
@@ -110,7 +111,11 @@ export default function StreamClient() {
     <div style={styles.bgColor}>
       <h1 style={styles.heading}>Informly</h1>
       <h2 style={styles.subHeading}>Help, just a tap away</h2>
-      <div ref={remoteStreamRef} id="remote-stream" style={styles.streamContainer}>
+      <div
+        ref={remoteStreamRef}
+        id="remote-stream"
+        style={styles.streamContainer}
+      >
         {/* Video will be rendered inside this container */}
       </div>
     </div>
@@ -126,12 +131,12 @@ const styles = {
     fontSize: "2.5rem",
     fontWeight: "bold",
   },
-  subHeading:{
-fontSize:"1rem",
-fontFamily:"'Poppins',sans-serif",
-color:"#000000",
-fontWeight:"bold",
-textAlign:"center"
+  subHeading: {
+    fontSize: "1rem",
+    fontFamily: "'Poppins',sans-serif",
+    color: "#000000",
+    fontWeight: "bold",
+    textAlign: "center",
   },
   streamContainer: {
     display: "flex",
@@ -150,9 +155,7 @@ textAlign:"center"
     backgroundColor: "gray", // Fallback color for player containers
     border: "1px solid #ffffff", // Optional border for visibility
   },
-  bgColor:{
-    backgroundColor:"white"
-  }
+  bgColor: {
+    backgroundColor: "white",
+  },
 };
-
-
