@@ -6,7 +6,7 @@ import { useSearchParams } from "next/navigation";
 
 const appId = "5d6071ce5e0445709bc9f1c7d7f20888";
 const token =
-  "007eJxTYPCxZGXgNAhV7Xwqoc9V0tXbL79z/9SFL/8GiiX28pxR7VRgME0xMzA3TE41TTUwMTE1N7BMSrZMM0w2TzFPMzKwsLCYkvEhvSGQkWFD/AlWRgYIBPE5GDLz0vKLcnMqGRgAt28epA==";
+  "007eJxTYFDvzDqZzaa5d8fuN2mlb8w9Qta+2uP8J8p7UZWjiB/fzH0KDKYpZgbmhsmppqkGJiam5gaWScmWaYbJ5inmaUYGFhYWshs/pTcEMjJYO6UzMjJAIIjPwZCZl5ZflJtTycAAALbjIGs=";
 const channelName = "informly";
 
 export default function StreamClient() {
@@ -140,7 +140,7 @@ const styles = {
   },
   streamContainer: {
     display: "flex",
-  flexDirection:'row',
+    flexDirection: "row",
     width: "100vw",
     height: "calc(100vh - 60px)",
     justifyContent: "space-around", // Space out the video containers
