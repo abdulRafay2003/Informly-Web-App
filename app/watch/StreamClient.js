@@ -5,8 +5,6 @@ import AgoraRTC from "agora-rtc-sdk-ng";
 import { useSearchParams } from "next/navigation";
 
 const appId = "5d6071ce5e0445709bc9f1c7d7f20888";
-const token =
-  "007eJxTYFDvzDqZzaa5d8fuN2mlb8w9Qta+2uP8J8p7UZWjiB/fzH0KDKYpZgbmhsmppqkGJiam5gaWScmWaYbJ5inmaUYGFhYWshs/pTcEMjJYO6UzMjJAIIjPwZCZl5ZflJtTycAAALbjIGs=";
 const channelName = "informly";
 
 export default function StreamClient() {
@@ -14,15 +12,17 @@ export default function StreamClient() {
   const remoteStreamRef = useRef(null);
   const clientRef = useRef(null);
 
-  // useEffect(() => {
-  //   let tokenParam = searchParams.get("token");
-  //   if (tokenParam) {
-  //     tokenParam = tokenParam.replace(/ /g, "+"); // Handle spaces in the token
-  //     const decodedToken = decodeURIComponent(tokenParam);
-  //     setToken(decodedToken); // Store the decoded token in state
-  //     // console.log("Decoded Token -------->>>>>", decodedToken);
-  //   }
-  // }, [searchParams]);
+  const [token, setToken] = useState("");
+
+  useEffect(() => {
+    let tokenParam = searchParams.get("token");
+    if (tokenParam) {
+      tokenParam = tokenParam.replace(/ /g, "+"); // Handle spaces in the token
+      const decodedToken = decodeURIComponent(tokenParam);
+      console.log("Decoded Token -------->>>>>", decodedToken);
+      setToken(decodedToken); // Store the decoded token in state
+    }
+  }, [searchParams]);
 
   useEffect(() => {
     if (!token) return;
