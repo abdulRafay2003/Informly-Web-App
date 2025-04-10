@@ -1,4 +1,4 @@
-// File: /Users/abdurrafay/Documents/Rafay/ReactNative/Projects/Informly/Informly-Web-App/app/page.js
+// File: /Users/navaidjafri/Documents/OfficeProjects/MyProjects/Informly-Web/Informly-Web-App/app/page.js
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

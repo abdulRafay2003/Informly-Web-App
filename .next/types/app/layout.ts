@@ -1,4 +1,4 @@
-// File: /Users/abdurrafay/Documents/Rafay/ReactNative/Projects/Informly/Informly-Web-App/app/layout.tsx
+// File: /Users/navaidjafri/Documents/OfficeProjects/MyProjects/Informly-Web/Informly-Web-App/app/layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

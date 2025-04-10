@@ -109,8 +109,6 @@ export default function StreamClient() {
 
   return (
     <div style={styles.bgColor}>
-      <h1 style={styles.heading}>Informly</h1>
-      <h2 style={styles.subHeading}>Help, just a tap away</h2>
       <div
         ref={remoteStreamRef}
         id="remote-stream"
@@ -142,7 +140,7 @@ const styles = {
     display: "flex",
     flexDirection: "row",
     width: "100vw",
-    height: "calc(100vh - 60px)",
+    height: "calc(100vh)",
     justifyContent: "space-around", // Space out the video containers
     alignItems: "center",
     backgroundColor: "white",
