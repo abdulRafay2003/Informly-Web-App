@@ -40,7 +40,7 @@ export default function StreamClient() {
           await client.subscribe(user, mediaType);
 
           if (mediaType === "video" && user.videoTrack) {
-            console.log("User===>>", user.dataChannels);
+            console.log("User===>>", user.videoTrack);
             // console.log("leng===>>", user.videoTrack);
             const videoTracks = user.videoTrack
               ? [user.videoTrack]
@@ -54,8 +54,10 @@ export default function StreamClient() {
               if (!playerContainer) {
                 playerContainer = document.createElement("div");
                 playerContainer.id = `user-${user.uid}-${index}`;
-                playerContainer.style.width = "50%"; // Adjust to fit two video streams
-                playerContainer.style.height = "900px"; // Adjust to fit two video streams
+                playerContainer.style.width = "100%"; // Adjust to fit two video streams
+                playerContainer.style.height = "100vh"; // Adjust to fit two video streams
+                playerContainer.style.objectFit = "cover"; // Adjust to fit two video streams
+                playerContainer.style.objectPosition = "center"; // Adjust to fit two video streams
                 playerContainer.style.display = "inline-block"; // To place streams side by side
                 remoteStreamRef.current.append(playerContainer);
               }
@@ -109,8 +111,6 @@ export default function StreamClient() {
 
   return (
     <div style={styles.bgColor}>
-      <h1 style={styles.heading}>Informly</h1>
-      <h2 style={styles.subHeading}>Help, just a tap away</h2>
       <div
         ref={remoteStreamRef}
         id="remote-stream"
@@ -142,7 +142,7 @@ const styles = {
     display: "flex",
     flexDirection: "row",
     width: "100vw",
-    height: "calc(100vh - 60px)",
+    height: "calc(100vh)",
     justifyContent: "space-around", // Space out the video containers
     alignItems: "center",
     backgroundColor: "white",
